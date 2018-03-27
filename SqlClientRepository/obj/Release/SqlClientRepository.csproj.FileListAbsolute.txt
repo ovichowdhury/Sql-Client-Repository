@@ -1,0 +1,4 @@
+E:\O V E\CIS\Advanced topic in programming 2\SqlClientRepository\SqlClientRepository\bin\Release\SqlClientRepository.dll
+E:\O V E\CIS\Advanced topic in programming 2\SqlClientRepository\SqlClientRepository\bin\Release\SqlClientRepository.pdb
+E:\O V E\CIS\Advanced topic in programming 2\SqlClientRepository\SqlClientRepository\obj\Release\SqlClientRepository.dll
+E:\O V E\CIS\Advanced topic in programming 2\SqlClientRepository\SqlClientRepository\obj\Release\SqlClientRepository.pdb
