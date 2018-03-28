@@ -19,9 +19,9 @@ SQL client repository is an ado.net SQL client wrapper for convenient access of 
 
  string sql = "CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255) );" ;
 
-db.Execute(sql); ```
+db.Execute(sql);
 
-``` // for executing a query with parameter value 
+// for executing a query with parameter value 
 
 string sql = "UPDATE persons SET FirstName = @name WHERE PersonId = @id";
 
