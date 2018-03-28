@@ -12,7 +12,7 @@ SQL client repository is an ado.net SQL client wrapper for convenient access of 
 
 ## Examples
 ```
-// Create an instance of SqlClientWrapper class and pass the connection string in the constructor parameter
+// Create an instance of SqlClientWrapper class and pass the connection string as constructor parameter
 
  ISqlClientWrapper db = new SqlClientWrapper("server=.; database=YOUR_DATABASE_NAME; integrated security=SSPI"); 
 
@@ -29,5 +29,17 @@ string sql = "UPDATE persons SET FirstName = @name WHERE PersonId = @id";
 var parameters = new Dictionary<string, object>(){ {"name", "Nahid chowdhury"}, {"id", 5} };
 
 int numOfRowEffected = db.Execute(sql, parameters); 
+
+// for retrieving value from database tables
+
+string sql = "SELECT * FROM Persons WHERE PersonID = @id";
+
+var param = new Dictionary<string, object>(){ {"id", 5} };
+
+var result = db.Select(sql, param); // the result is a list of dictionaries where each dictionary represents a row of database table
+
+// for example we want to access the FirstName of first row
+
+string firstName = result[0]["FirstName"];
 
 ```
