@@ -11,20 +11,20 @@ SQL client repository is an ado.net SQL client wrapper for convenient access of 
 2. Add this class library in the reference section of your project.
 
 ## Examples
-``` // Create an instance of SqlClientWrapper class and pass the connection string in the constructor parameter```
+``` // Create an instance of SqlClientWrapper class and pass the connection string in the constructor parameter
 
-``` ISqlClientWrapper db = new SqlClientWrapper("server=.; database=YOUR_DATABASE_NAME; integrated security=SSPI"); ```
+ ISqlClientWrapper db = new SqlClientWrapper("server=.; database=YOUR_DATABASE_NAME; integrated security=SSPI"); 
 
-``` // for executing any query just call Execute(sqlQuery) method from SqlClientWrapper class ```
+// for executing any query just call Execute(sqlQuery) method from SqlClientWrapper class 
 
-``` string sql = "CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255) );" ; ```
+ string sql = "CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255) );" ;
 
-``` db.Execute(sql); ```
+db.Execute(sql); ```
 
-``` // for executing a query with parameter value
+``` // for executing a query with parameter value 
 
-``` string sql = "UPDATE persons SET FirstName = @name WHERE PersonId = @id"; ```
+string sql = "UPDATE persons SET FirstName = @name WHERE PersonId = @id";
 
-``` var parameters = new Dictionary<string, object>(){ {"name", "Nahid chowdhury"}, {"id", 5} }; ```
+var parameters = new Dictionary<string, object>(){ {"name", "Nahid chowdhury"}, {"id", 5} };
 
-``` int numOfRowEffected = db.Execute(sql, parameters); ```
+int numOfRowEffected = db.Execute(sql, parameters); ```
