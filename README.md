@@ -6,3 +6,10 @@ SQL client repository is an ado.net SQL client wrapper for convenient access of 
 2. No need to write any ADO.NET code for executing query in the sql server database.
 3. Return's query result in list format therefore accessing database values in c# become very easy.
 
+## Integration
+1. Download the Sql-Client-Repository/SqlClientRepository/bin/Release/SqlClientRepository.dll class library.
+2. Add this class library in the reference section of your project.
+
+## Examples
+``` // Create a instance of SqlClientWrapper class and pass the connection string in the constructor parameter```
+``` ISqlClientWrapper db = new SqlClientWrapper("server=.; database=YOUR_DATABASE_NAME; integrated security=SSPI"); ```
