@@ -11,5 +11,9 @@ SQL client repository is an ado.net SQL client wrapper for convenient access of 
 2. Add this class library in the reference section of your project.
 
 ## Examples
-``` // Create a instance of SqlClientWrapper class and pass the connection string in the constructor parameter```
+``` // Create an instance of SqlClientWrapper class and pass the connection string in the constructor parameter```
 ``` ISqlClientWrapper db = new SqlClientWrapper("server=.; database=YOUR_DATABASE_NAME; integrated security=SSPI"); ```
+
+``` // for executing any query just call Execute(sqlQuery) method from SqlClientWrapper class ```
+``` string sql = "CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255) );" ; ```
+``` db.Execute(sql); ```
