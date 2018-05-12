@@ -9,7 +9,7 @@ namespace SqlClientRepository
 {
     public class SqlClientWrapper : ISqlClientWrapper
     {
-        private string connectionString;
+        private string connectionString; // this variable is used as connection string with database
 
         public SqlClientWrapper(string connectionString)
         {
