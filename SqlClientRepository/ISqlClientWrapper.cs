@@ -9,9 +9,9 @@ namespace SqlClientRepository
     public interface ISqlClientWrapper
     {
         string ConnectionString { get; set; }
-        int Execute(string sqlQuery);
-        int Execute(string sqlQuery, Dictionary<string, object> parameters);
-        List<Dictionary<string, object>> Select(string sqlQuery);
-        List<Dictionary<string, object>> Select(string sqlQuery, Dictionary<string, object> parameters);
+        int Execute(string sqlQuery); // for executing query in the database
+        int Execute(string sqlQuery, Dictionary<string, object> parameters); // for executing query in the database
+        List<Dictionary<string, object>> Select(string sqlQuery); // for retrieving value from database 
+        List<Dictionary<string, object>> Select(string sqlQuery, Dictionary<string, object> parameters); // for retrieving value from database
     }
 }
